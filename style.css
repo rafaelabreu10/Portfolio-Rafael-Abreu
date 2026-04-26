@@ -1,0 +1,288 @@
+/* Reset básico: remove margens e espaçamentos padrões dos navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configurações gerais da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Rolagem suave ao clicar nos links do menu */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Cabeçalho fixo no topo da página */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+/* Organização do menu */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Nome/logo do site */
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Lista de links do menu */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+/* Links do menu */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+/* Efeito ao passar o mouse no menu */
+.nav-links a:hover {
+    color: #3498db;
+}
+
+/* Botão de alternar tema */
+#btnTema {
+    width: auto;
+    padding: 8px 14px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+#btnTema:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Seção inicial de destaque */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+}
+
+/* Título principal */
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* Texto da seção inicial */
+.hero p {
+    font-size: 1.1rem;
+}
+
+/* Estilo padrão das seções de conteúdo */
+.conteudo {
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Títulos das seções */
+.conteudo h2,
+.form-container h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+    transition: color 0.3s;
+}
+
+/* Lista do portfólio */
+.conteudo ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+/* Links dentro do conteúdo */
+.conteudo a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.conteudo a:hover {
+    text-decoration: underline;
+}
+
+/* Container do formulário */
+.form-container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Grupo de cada campo do formulário */
+.input-group {
+    margin-bottom: 15px;
+}
+
+/* Rótulos dos campos */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Campos de texto e área de mensagem */
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 15px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Área de mensagem com altura maior */
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Destaque no campo ao clicar */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+/* Botão do formulário */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Efeito ao passar o mouse no botão de envio */
+button[type="submit"]:hover {
+    background-color: #219150;
+}
+
+/* Mensagens de erro da validação */
+.error-msg {
+    color: #e74c3c;
+    font-size: 12px;
+    display: none;
+    margin-top: 5px;
+}
+
+/* Mensagem de sucesso do envio */
+.success-msg {
+    margin-top: 15px;
+    color: #27ae60;
+    text-align: center;
+    display: none;
+    font-weight: bold;
+}
+
+/* Rodapé da página */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    transition: background-color 0.3s;
+}
+
+/* ---- TEMA ESCURO ---- */
+body.dark {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+
+body.dark header {
+    background-color: #0f0f23;
+}
+
+body.dark .conteudo,
+body.dark .form-container {
+    background-color: #16213e;
+    color: #e0e0e0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+}
+
+body.dark .conteudo h2,
+body.dark .form-container h2 {
+    color: #a8daff;
+}
+
+body.dark input,
+body.dark textarea {
+    background-color: #0f0f23;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+body.dark footer {
+    background-color: #0f0f23;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 70px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .conteudo,
+    .form-container {
+        margin: 30px 15px;
+    }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Configuração de caracteres para acentuação -->
+    <meta charset="UTF-8">
+
+    <!-- Deixa o site responsivo em celulares e tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfólio Pessoal</title>
+
+    <!-- Ligação com o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho com menu de navegação -->
+    <header>
+        <nav>
+            <!-- Logo/Nome do projeto -->
+            <div class="logo">Portfólio - Rafael Abreu</div>
+
+            <!-- Menu com links para as seções da própria página -->
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+
+            <!-- Botão para alternar entre tema claro e escuro -->
+            <button id="btnTema" onclick="alternarTema()">🌙 Tema</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção inicial da página -->
+        <section id="inicio" class="hero">
+            <h1>Rafael Soares de Abreu</h1>
+            <p>Segurança da Informação</p>
+        </section>
+
+        <!-- Seção Sobre Mim -->
+        <section id="sobre" class="conteudo">
+            <h2>Sobre Mim</h2>
+            <p>
+                Me chamo Rafael Soares de Abreu, entusiasta de tecnologia, tenho 37 anos e estou finalizando minha graduação em Segurança da informação.
+                Sou um profissional com mais de 10 anos de atuação em Tecnologia da Informação e ao longo da minha carreira adquiri uma visão abrangente da área de TI, agora venho buscando me direcionar para cibersegurança.
+            </p>
+            <p>
+                Tenho como hobbies: jogos eletrônicos e computadores.
+            </p>
+        </section>
+
+        <!-- Seção Formação -->
+        <section id="formacao" class="conteudo">
+            <h2>Formação</h2>
+            <p><strong>Formação Acadêmica:</strong> Tecnologia em Segurança da Informação (2024-2026).</p>
+            <p><strong>Certificações:</strong> Redes Cisco(CCNA V7) / Implantação de serviços em nuvem(AZ900) / Introdução ao Pentest(Desec).</p>
+            <p><strong>Idiomas:</strong> Inglês Técnico.</p>
+        </section>
+
+        <!-- Seção Portfólio -->
+        <section id="portfolio" class="conteudo">
+            <h2>Portfólio</h2>
+            <p>Abaixo temos o link de um projeto meu, desenvolvido para orientar adolescentes na escola sobre cibersegurança</p>
+            <ul>
+                <li>
+                    <a href="https://sites.google.com/view/seguranca-digital-escola/in%C3%ADcio" target="_blank">
+                        Projeto de segurança digital
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Seção Contato com formulário -->
+        <section id="contato" class="form-container">
+            <h2>Contato</h2>
+
+            <!-- Formulário validado pelo JavaScript -->
+            <form id="meuFormulario">
+                <div class="input-group">
+                    <label for="nome">Nome:</label>
+                    <input 
+                        type="text" 
+                        id="nome" 
+                        name="nome"
+                        placeholder="Digite seu nome"
+                    >
+                    <span class="error-msg" id="erro-nome">
+                        O nome é obrigatório.
+                    </span>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">E-mail:</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email"
+                        placeholder="exemplo@email.com"
+                    >
+                    <span class="error-msg" id="erro-email">
+                        Insira um e-mail válido.
+                    </span>
+                </div>
+
+                <div class="input-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea 
+                        id="mensagem" 
+                        name="mensagem"
+                        placeholder="Digite sua mensagem"
+                    ></textarea>
+                    <span class="error-msg" id="erro-mensagem">
+                        A mensagem é obrigatória.
+                    </span>
+                </div>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+
+            <!-- Mensagem exibida após o envio correto -->
+            <div id="sucesso" class="success-msg">
+                Mensagem enviada com sucesso!
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <p>&copy; 2026 - Rafael Abreu. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Ligação com o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
